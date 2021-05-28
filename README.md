@@ -53,7 +53,7 @@ npm run seed
 nodemon server.js
 ```
 
-8.
+8. Use Insomnia or a similar REST API Client to test.
 
 ## Usage
 
@@ -72,11 +72,11 @@ Special thanks to:
 
 ## Tests
 
-Testing is available through Insomnia (https://insomnia.rest/)
+Testing is available through Insomnia (https://insomnia.rest/) or a similar REST API Client.
 
 ## Questions
 
-For additional questions, you can check out my GitHub profile:
+For additional questions, please visit my GitHub profile:
 
 https://github.com/mentaltemple
 
