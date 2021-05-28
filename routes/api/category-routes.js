@@ -29,6 +29,7 @@ router.get("/:id", async (req, res) => {
       res.status(404).json({ message: "No category found with this id!" });
       return;
     }
+    res.status(200).json(categoryData);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -55,7 +56,7 @@ router.put("/:id", async (req, res) => {
         id: req.params.id,
       },
     });
-    res.status(200).json(categoryData);
+    res.status(200).json(`${categoryData} has been updated!`);
 
     if (!categoryData) {
       res.status(404).json({ message: "No category found with this id!" });
@@ -72,7 +73,7 @@ router.delete("/:id", async (req, res) => {
   try {
     const categoryData = await Category.destroy({
       where: {
-        id: res.params.id,
+        id: req.params.id,
       },
     });
 
@@ -80,6 +81,7 @@ router.delete("/:id", async (req, res) => {
       res.status(404).json({ message: "No category found with this id!" });
       return;
     }
+    res.status(200).json("Your category has been deleted from the database!");
   } catch (err) {
     res.status(500).json(err);
   }
